@@ -7,8 +7,9 @@ Created by Nikki#9699
 ## INTRODUCTION
 
 - A resource where polyzones are setup to protect an area
-- Specific Jobs can be ignored
-- Chance for alert can be changed per polyzone
+- Specific Jobs can be ignored (Changeable in config.lua) (If left empty it will always trigger)
+- Chance for alert can be changed per polyzone (Changeable in config.lua)
+- Set cooldown to prevent continous trigger (Changeable in config.lua)
 
 ## DEPENDENCIES
 **[qb-core] (https://github.com/qbcore-framework/qb-core)** - QBCore  
