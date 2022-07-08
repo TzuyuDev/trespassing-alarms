@@ -92,12 +92,9 @@ CreateThread(function()
               ZoneTriggered = false
             end
           end
-        else
+        else -- User not in zone
 
         end
-
-
-
       end)
     end
   end)
