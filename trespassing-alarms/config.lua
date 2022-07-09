@@ -30,7 +30,7 @@ Config.zones = {
         -- Notification Configuration
         notificationText = '' -- Custom text to show, otherwise default is used
     },
-    [1] = {
+    [2] = {
         label = "LS Water & Power", -- Label for your convenience
         zones = { -- Polyzone Coords
             vector2(733.28, 130.44),
