@@ -51,7 +51,7 @@ Config.zones = {
         alertCooldown = 10, -- Time in seconds
         alarmSound = 'Tresspass_Alarm' -- sound file in interact-sound
     },
-    [1] = {
+    [2] = {
         label = "LS Water & Power", -- Label for your convenience
         zones = { -- Polyzone Coords
             vector2(733.28, 130.44),
