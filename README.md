@@ -4,7 +4,9 @@ Created by Nikki#9699
 
 ![screenshot-alert](https://i.gyazo.com/14efab35c06823a4916b8cbde337bd43.png)
 
-[![Watch the preview](https://i.gyazo.com/fec76efe8ea8dae5cb1161436858bbac.jpg)](https://streamable.com/g9z7ux)
+# Preview video
+
+https://streamable.com/g9z7ux
 
 ## INTRODUCTION
 
