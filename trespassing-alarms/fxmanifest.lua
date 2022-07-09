@@ -1,9 +1,10 @@
 fx_version 'cerulean'
 game 'gta5'
 
+name 'QBCore Trespassing Alarms'
 author 'Nikki#9699'
 description 'QB Core Tresspass Alarms (https://github.com/TzuyuDev/trespassing-alarms)'
-version '0.0.1'
+version '1.0.1'
 
 
 client_scripts {
@@ -12,8 +13,8 @@ client_scripts {
     '@PolyZone/EntityZone.lua',
     '@PolyZone/CircleZone.lua',
     '@PolyZone/ComboZone.lua',
-    'config.lua',
-    'client.lua',
+    'config.lua', -- Config.lua (Tresspassing-alarms)
+    'client.lua', -- Client.lua (Tresspassing-alarms)
 }
 
 
