@@ -73,28 +73,62 @@ CreateThread(function()
           -- Create Alert
 
           if Config.debug == true then
-            TriggerServerEvent("InteractSound_SV:PlayOnSource", Config.zones[k].alarmSound, 0.8)
+
+            -- Check if sound alert gets played
+            if Config.zones[k].playSound == true then
+              TriggerServerEvent("InteractSound_SV:PlayOnSource", Config.zones[k].alarmSound, Config.zones[k].soundVolume)
+            end
+
+            -- Insert wait to prevent overlapping sounds
             Wait(1000)
-            QBCore.Functions.Notify("Shit... the cops have been alerted! Quickly get away!", "success")
+
+            -- Check if player gets alerted
+            if Config.zones[k].alertPlayer == true then
+              -- Get the notification text, otherwise fall back to default
+              if Config.zones[k].notificationText == '' then
+                Config.zones[k].notificationText = Config.defaultNotificationText
+              end
+              -- Send notification
+              QBCore.Functions.Notify(Config.zones[k].notificationText, "success")
+            end
+            -- Alert the police
             exports['ps-dispatch']:SuspiciousActivity()
           else
             if alert == true then
+              -- Generate chance to trigger alert
               local triggerAlert = randomChance(Config.zones[k].alertChance)
-              if triggerAlert == true and ZoneTriggered == false then
-              TriggerServerEvent("InteractSound_SV:PlayOnSource", Config.zones[k].alarmSound, 0.8)
-              Wait(1000)
-              QBCore.Functions.Notify("Shit... the cops have been alerted! Quickly get away!", "success")
-              exports['ps-dispatch']:SuspiciousActivity()
-              TriggerServerEvent("InteractSound_SV:PlayOnSource", Config.zones[k].alarmSound, 0.2)
-              ZoneTriggered = true
+              -- If alert is triggered, and zone cooldown is false
+                if triggerAlert == true and ZoneTriggered == false then
+
+                  -- Check if sound alert gets played
+                  if Config.zones[k].playSound == true then
+                    TriggerServerEvent("InteractSound_SV:PlayOnSource", Config.zones[k].alarmSound, Config.zones[k].soundVolume)
+                  end
+                  -- Insert wait to prevent overlapping sounds
+                  Wait(1000)
+                  -- Check if player gets alerted
+                  if Config.zones[k].alertPlayer == true then
+                    -- Get the notification text, otherwise fall back to default
+                    if Config.zones[k].notificationText == '' then
+                      Config.zones[k].notificationText = Config.defaultNotificationText
+                    end
+                    -- Send notification
+                    QBCore.Functions.Notify(Config.zones[k].notificationText, "success")
+                  end
+                   -- Alert the police
+                exports['ps-dispatch']:SuspiciousActivity()
+                ZoneTriggered = true
               end
               Wait(Config.zones[k].alertCooldown * 1000)
               ZoneTriggered = false
             end
           end
-        else -- User not in zone
+        else
 
         end
+
+
+
       end)
     end
   end)
