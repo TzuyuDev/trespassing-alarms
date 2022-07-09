@@ -11,6 +11,8 @@ I'm super excited to announce `tresspassing-alarms` Version 1.0.1
 
 This update adds some more customization to the alert system and the code has been cleaned up
 
+**Feel free to report any bugs with the resource to me on Github or discord Nikki#9699**
+
 ### Major changes
 
 - Added `Config.defaultNotificationText` This is the default shown text for player notifications
@@ -21,7 +23,7 @@ This update adds some more customization to the alert system and the code has be
 ### Minor Changes
 - Cleaned up the code in the `client.lua` file
 - Updated `fxmanifest.lua` file
-- 
+
 ## [1.0.0] - 2022-07-09
 
 I'm super excited to announce `tresspassing-alarms` Version 1.0.0
