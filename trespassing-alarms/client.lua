@@ -61,7 +61,7 @@ CreateThread(function()
         --Check if in zone
         if inZone then -- User is in zone
           local jobs = Config.zones[k].ignoredJobs
-          local PlayerJobP = PlayerJob.name
+          local PlayerJob = PlayerJob.name
           local alert = false
           local triggertime = ''
           -- Check if job is allowed to be in zone
